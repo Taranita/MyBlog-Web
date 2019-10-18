@@ -12,11 +12,6 @@ if(empty($_REQUEST['email']) || empty($_REQUEST['password'])){
     if($emailExists){
         $result = logIn($email, $password);
         echo json_encode($result);
-        // if($result){
-        //     echo json_encode($result);
-        // }else{
-        //     echo json_encode($result);
-        // }
     }else{
         echo json_encode("Email does not exist.");
     }

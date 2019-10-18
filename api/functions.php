@@ -73,3 +73,15 @@ function isEmailExist($email){
         //return "Query failed";
     }
 }
+
+function getUserDetailByEmail($email){
+    global $con;
+
+    $query = "SELECT * from users WHERE email = '$email'";
+    $result = mysqli_query($con, $query);
+    if($result){
+        return $result;    
+    }else{
+        return false;
+    }
+}
